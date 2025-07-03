@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('course_id');
 
             // curdate() es una función de MySQL que devuelve la fecha actual
-            $table->string('enrollment_date')->default(DB::raw('curdate()'));
+            $table->date('enrollment_date')->default(DB::raw('curdate()'));
         });
     }
 
