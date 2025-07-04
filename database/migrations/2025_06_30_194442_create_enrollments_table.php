@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -19,8 +18,7 @@ return new class extends Migration
             $table->integer('student_id');
             $table->integer('course_id');
 
-            // curdate() es una función de MySQL que devuelve la fecha actual
-            $table->date('enrollment_date')->default(DB::raw('curdate()'));
+            $table->date('enrollment_date');
         });
     }
 
